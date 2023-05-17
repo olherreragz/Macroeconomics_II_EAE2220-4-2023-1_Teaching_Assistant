@@ -463,6 +463,203 @@ hold off;
 
 clear all;
 
+%% Ay 4 naudon exc. 2) d)
+
+b= 0.01:0.001:19.5;
+b = b';
+f = (log(b)/0.16) - 1.5
+y= 0.01:0.001:18.6;
+g = (log(b)/0.16) - 3.5;
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 27 -3 20.5]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 20.7], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [26.05 -2], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+text(19.3, 19.3, "$$\mbox{E} [\pi] = \sigma$$", 'FontSize', 14, 'Interpreter', 'latex', 'Color', 'red', 'Rotation', 45);
+text(20.1, 17, '$$\mbox{E} [\pi](\sigma, d)$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(20.1, 15, '$$\mbox{E} [\pi](\sigma, d^\prime)$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(1.621, 1.621,'.','MarkerSize', 20, 'Color', 'blue');
+text(0.2, 2.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(15.62, 15.62,'.','MarkerSize', 20, 'Color', 'blue');
+text(14.85, 16.7, '$$B$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+hold off;
+
+% Zoom A stage 1
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 3.84 -3 5.3]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 5.3], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [3.84 -0.05], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+plot(1.655, 1.655,'.','MarkerSize', 20, 'Color', 'blue');
+text(1.41, 2.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(2.28, 1.655,'.','MarkerSize', 20, 'Color', 'red');
+text(1.41, 2.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(2.2, 1.01, '$$A^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(2.71, 1.655, "$$\mbox{E} [\pi] < \sigma$$", 'FontSize', 10, 'Interpreter', 'latex', 'Color', 'red');
+text(3.22, 1.655, "$$\Rightarrow$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'red');
+text(3.5, 1.655, "$$\uparrow \dot{\pi}^e$$", 'FontSize', 10, 'Interpreter', 'latex', 'Color', 'red', 'FontWeight','bold');
+hold off;
+
+% Zoom A Stage 2
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 3.84 -3 5.3]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 5.3], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [3.84 -0.05], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+plot(1.655, 1.655,'.','MarkerSize', 20, 'Color', 'blue');
+text(1.41, 2.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(2.28, 1.655,'.','MarkerSize', 20, 'Color', 'red');
+text(1.41, 2.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(2.2, 1.01, '$$A^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(2.5, 1.5, "$$\mbox{E} [\pi] \longrightarrow$$", 'FontSize', 10, 'Interpreter', 'latex', 'Color', 'red', 'Rotation', 45);
+plot(2.69, 2.69,'.','MarkerSize', 20, 'Color', 'blue');
+text(2.63, 3.17, '$$A^{\prime \prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+hold off;
+
+% Zoom B stage 1
+
+b= 0.01:0.001:37;
+b = b';
+f = (log(b)/0.16) - 1.5
+y= 0.01:0.001:37;
+g = (log(b)/0.16) - 3.5;
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 37 7 20.5]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 20.7], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [36 8.5], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+plot(1.621, 1.621,'.','MarkerSize', 20, 'Color', 'blue');
+plot(15.72, 15.72,'.','MarkerSize', 20, 'Color', 'blue');
+plot(21.65, 15.72,'.','MarkerSize', 20, 'Color', 'red');
+text(14.85, 16.7, '$$B$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(21, 14.75, '$$B^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(24.56, 14.75, "$$\mbox{E} [\pi] < \sigma$$", 'FontSize', 10, 'Interpreter', 'latex', 'Color', 'red');
+text(29.56, 14.75, "$$\Rightarrow$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'red');
+text(33, 14.75, "$$\uparrow \dot{\pi}^e$$", 'FontSize', 10, 'Interpreter', 'latex', 'Color', 'red', 'FontWeight','bold');
+hold off;
+
+% Zoom B stage 2
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 37 7 20.5]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 20.7], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [36 8.5], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+plot(1.621, 1.621,'.','MarkerSize', 20, 'Color', 'blue');
+plot(15.72, 15.72,'.','MarkerSize', 20, 'Color', 'blue');
+plot(21.65, 15.72,'.','MarkerSize', 20, 'Color', 'red');
+text(14.85, 16.7, '$$B$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(21, 14.75, '$$B^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(28, 16.5, "$$\mbox{E} [\pi] \longrightarrow \infty$$", 'FontSize', 13, 'Interpreter', 'latex', 'Color', 'red', 'Rotation', 26);
+hold off;
+
+% d' > dM
+
+b= 0.01:0.001:45.6;
+b = b';
+f = (log(b)/0.16) - 1.5
+y= 0.01:0.001:45.6;
+g = (log(b)/0.16) - 6;
+
+% From A
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 45.6 -3 20.5]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 20.7], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [45 0.05], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+text(34.5, 20.5, '$$d$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(46.2, 17.83, '$$d^\prime$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(1.621, 1.621,'.','MarkerSize', 20, 'Color', 'blue');
+text(0.05, 3.3, '$$A$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(3.39, 1.62,'.','MarkerSize', 20, 'Color', 'red');
+text(4.67, 2.3, '$$A^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(9.5, 5.5, "$$\mbox{E} [\pi] \longrightarrow \infty$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'red', 'Rotation', 40);
+hold off;
+
+% From B
+
+close all
+plot(b, f, 'Color', 'blue', 'LineWidth', 1);
+axis([0 45.6 -3 20.5]);
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+set(gca, XAxisLocation = 'origin');
+hold on;
+plot(y, y, 'Color', 'red', 'LineStyle', '--');
+ylab = ylabel("$$\mbox{E} [\pi]$$", 'FontSize', 17, 'Position',[0 20.7], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \sigma $$", 'FontSize', 22, 'Position', [45 0.05], 'Interpreter', 'latex', 'Color', 'blue');
+plot(b, g, 'Color', 'blue', 'LineWidth', 1);
+text(34.5, 20.5, '$$d$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(46.2, 17.83, '$$d^\prime$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+plot(15.62, 15.62,'.','MarkerSize', 20, 'Color', 'blue');
+plot(31.793, 15.62,'.','MarkerSize', 20, 'Color', 'red');
+text(13.5, 16.7, '$$B$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(31, 16.7, '$$B^{\prime}$$','FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(34.8, 14.8, "$$\mbox{E} [\pi] \longrightarrow \infty$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'red', 'Rotation', 15);
+hold off;
+
 
 %% Ay 4 naudon exc. 4) a) A segniorage
 clear all
@@ -567,3 +764,40 @@ hold off;
 
 clear all;
 
+%% Ay 4 naudon exc. 4) b) B segniorage without normalization
+
+clear all
+b= 0:0.0001:2.5;
+b = b';
+f = b./(0.03 + b).^(1.1);
+f_derivative = (0.03 - 0.1 * b)./(0.03 + b).^(2.1);
+f_second_derivative = (-0.1*(0.03 + b) - 2.1*(0.03-0.1*b))./(0.03 + b).^(3.1);
+
+close all
+plot(b, f, 'Color', 'blue');
+set(gca,'xticklabel',num2str(''),'yticklabel',num2str(''))
+hold on; 
+ylab = ylabel("$$S$$", 'FontSize', 17, 'Position',[0 1.6], 'Interpreter', 'latex', 'Color', 'blue');
+set(ylab,'rotation',0,'VerticalAlignment','bottom')
+set(gca, 'Box', 'off');
+set(gca, 'YColor', 'blue');
+set(gca, 'XColor', 'blue');
+xlabel("$$ \pi_B $$", 'FontSize', 24, 'Position', [2.3 0.04], 'Interpreter', 'latex', 'Color', 'blue');
+axis([0 2.3 -0.8 1.6]);
+set(gca, XAxisLocation = 'origin');
+set(gca, YAxisLocation = 'origin');
+plot(b, f_derivative, 'Color', 'green');
+plot(b, f_second_derivative, 'Color', 'magenta');
+line([0.3 0.3], [0 1.01], 'LineStyle', '--', 'LineWidth', 0.6, 'Color', 'blue');
+plot(0.3, 1.01,'.','MarkerSize', 20, 'Color', 'blue');
+text(1.7, 1, "$$S_B$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+text(.12, 1.3, "$$S_B^{\prime}$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'green');
+text(.38, -0.65, "$$S_B^{\prime\prime}$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'magenta');
+text(0.24, -0.17, "$$\pi_A^{*}$$", 'FontSize', 17, 'Interpreter', 'latex', 'Color', 'blue');
+line([0.6 0.6], [0 .99], 'LineStyle', '--', 'LineWidth', 0.6, 'Color', 'magenta');
+% plot(0.6, 0.99,'.','MarkerSize', 20, 'Color', 'blue');
+% plot(0.6, 0,'.','MarkerSize', 20, 'Color', 'blue');
+
+hold off;
+
+clear all;
